@@ -1,0 +1,710 @@
+502:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+501:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+500:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+415:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+414:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+413:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+411:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+408:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+405:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+401:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+400:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body:
+    application/json:
+      example: |
+        {"message": "Error occured with <<resourcePathName|!singularize>> resource." }
+        
+204:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234            
+  body: null
+201:
+  headers:
+    content-encoding:
+      description: |
+        The Content-Encoding entity-header field is used as a modifier to the media-type. Content-Encoding is primarily used to allow a document to be compressed without losing the identity of its underlying media type.
+      type: string
+      required: false
+      example: |
+        gzip
+    content-language:
+      description: |
+        The Content-Language entity-header field describes the natural language(s) of the intended audience for the enclosed entity. Note that this might not be equivalent to all the languages used within the entity-body.
+      type: string
+      required: false
+      example: |
+        en-gb
+    content-length:
+      description: |
+        The Content-Length entity-header field indicates the size of the entity-body, in decimal number of OCTETs, sent to the recipient or, in the case of the HEAD method, the size of the entity-body that would have been sent had the request been a GET.
+      type: integer
+      required: false
+      example: |
+        3495
+    content-type:
+      description: |
+        The Content-Type entity-header field indicates the media type of the entity-body sent to the recipient or, in the case of the HEAD method, the media type that would have been sent had the request been a GET.
+      type: string
+      required: false
+      example: |
+        text/html; charset=ISO-8859-4
+    last-modified:
+      description: |
+        The Last-Modified entity-header field indicates the date and time at which the origin server believes the variant was last modified.
+      type: string
+      required: false
+      example: |
+        Tue, 15 Nov 1994 12:45:26 GMT
+    transfer-encoding:
+      description: |
+        The Transfer-Encoding general-header field indicates what (if any) type of transformation has been applied to the message body in order to safely transfer it between the sender and the recipient. This differs from the content-coding in that the transfer-coding is a property of the message, not of the entity.
+      type: string
+      required: false
+      example: |
+        chunked
+    location:
+      description: |
+        The Location response-header field is used to redirect the recipient to a location other than the Request-URI for completion of the request or identification of a new resource. For 201 (Created) responses, the Location is that of the new resource which was created by the request. For 3xx responses, the location SHOULD indicate the server's preferred URI for automatic redirection to the resource. The field value consists of a single absolute URI.
+      type: string
+      required: true
+      example: |
+        https://api.cloudshop.local/v1/<<resourcePathName>>/1234
+  body: null

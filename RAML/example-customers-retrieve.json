@@ -1,0 +1,123 @@
+{
+  "responseData": {
+    "meta": {
+      "maxItems": 3,
+      "isTruncated": true,
+      "estimatedResultCount": 100,
+      "pointer": "fb9e99f4-c3d7-4fcb-9e95-62504d6311f1",
+      "nextPointer": "a1625ba7-b706-4e01-b6a3-a89a4fd68e0d",
+      "requestInterval": "300",
+      "timestamp": "Sun, 17 Aug 2014 01:30:00 GMT"
+    },
+    "results": [
+      {
+        "meta": {
+          "id": "fb9e99f4-c3d7-4fcb-9e95-62504d6311f1",
+          "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+          "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+        },
+        "name": {
+          "firstName": "John",
+          "lastName": "Smith"
+        },
+        "addresses": [
+          {
+            "meta": {
+              "id": "1fc558a5-2368-4969-87e2-70e0473a25b1",
+              "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+              "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+            },
+            "kind": "Postal Address",
+            "addressLine1": "PO box 314 PO",
+            "addressLine2": "17-29 Greenfield Rd",
+            "city": "Sydney",
+            "country": "Australia",
+            "state": "NSW",
+            "postCode": 2000
+          },
+          {
+            "meta": {
+              "id": "cb54a3bf-33d3-4c5b-abcc-215ba2eeaa6f",
+              "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+              "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+            },
+            "kind": "Home Address",
+            "addressLine1": "Unit 3/14 Pie St",
+            "addressLine2": "",
+            "city": "Sydney",
+            "country": "Australia",
+            "state": "NSW",
+            "postCode": 2000
+          }
+        ]
+      },
+      {
+        "meta": {
+          "id": "f2f20898-4ed2-4fba-9638-6b4092e00ebe",
+          "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+          "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+        },
+        "name": {
+          "firstName": "Jane",
+          "lastName": "Smith"
+        },
+        "addresses": [
+          {
+            "meta": {
+              "id": "cda702b6-be91-48e1-ae81-1f2f2ee16932",
+              "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+              "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+            },
+            "addressLine1": "42 Douglas St",
+            "addressLine2": "",
+            "city": "Sydney",
+            "country": "Australia",
+            "state": "NSW",
+            "postCode": 2000
+          }
+        ]
+      },
+      {
+        "meta": {
+          "id": "b26676de-ca35-4d89-8b6b-629b9677106e",
+          "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+          "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+        },
+        "name": {
+          "firstName": "James",
+          "lastName": "Smith"
+        },
+        "addresses": [
+          {
+            "meta": {
+              "id": "d17c5139-d2f4-49a3-be3f-f296339a4782",
+              "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+              "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+            },
+            "kind": "Postal Address",
+            "addressLine1": "32 Icosahedron Rd",
+            "addressLine2": "",
+            "city": "Sydney",
+            "country": "Australia",
+            "state": "NSW",
+            "postCode": 2000
+          },
+          {
+            "meta": {
+              "id": "9044283f-6f84-4425-94da-73b765a6272c",
+              "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+              "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+            },
+            "kind": "Residential Address",
+            "addressLine1": "Unit 17/29 Handy Rd",
+            "addressLine2": "",
+            "city": "Sydney",
+            "country": "Australia",
+            "state": "NSW",
+            "postCode": 2000
+          }
+        ]
+      }
+    ]
+  }
+}

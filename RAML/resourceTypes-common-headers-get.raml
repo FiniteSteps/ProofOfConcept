@@ -1,0 +1,49 @@
+accept:
+  description: |
+    The Accept request-header field can be used to specify certain media types which are acceptable for the response. Accept headers can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an in-line image.
+  type: string
+  required: false
+  example: |
+    text/*;q=0.3, text/html;q=0.7, text/html;level=1,
+     text/html;level=2;q=0.4, */*;q=0.5            
+accept-encoding:
+    description: |
+      The Accept-Encoding request-header field is similar to Accept, but restricts the content-codings (section 3.5) that are acceptable in the response.
+    type: string
+    required: false
+    example: |
+      gzip;q=1.0, identity; q=0.5, *;q=0
+accept-language:
+  description: |
+    The Accept-Language request-header field is similar to Accept, but restricts the set of natural languages that are preferred as a response to the request. 
+  type: string
+  example: |
+    en-gb, en-us;q=0.8, en;q=0.7
+    
+authorization:
+  description: |
+    The Authorization field value consists of credentials containing the authentication information of the user agent for the realm of the resource being requested.
+  type: string
+  required: true
+host:
+  description: |
+    The Host request-header field specifies the Internet host and port number of the resource being requested, as obtained from the original URI given by the user or referring resoure.
+  type: string
+  required: false
+  example: |
+    www.w3.org
+if-modified-since:
+  description: |
+    The If-Modified-Since request-header field is used with a method to make it conditional: if the requested variant has not been modified since the time specified in this field, an entity will not be returned from the server; instead, a 304 (not modified) response will be returned without any message-body.
+  type: string
+  required: false
+  example: |
+     Sat, 29 Oct 1994 19:43:31 GMT
+if-unmodified-since:
+  description: |
+    The If-Unmodified-Since request-header field is used with a method to make it conditional. If the requested resource has not been modified since the time specified in this field, the server SHOULD perform the requested operation as if the If-Unmodified-Since header were not present.
+  type: string
+  required: false
+  example: |
+    Tue, 15 Nov 1994 12:45:26 GMT    
+  

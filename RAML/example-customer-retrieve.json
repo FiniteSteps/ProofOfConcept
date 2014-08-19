@@ -1,0 +1,41 @@
+{
+      "meta": {
+        "id": "fb9e99f4-c3d7-4fcb-9e95-62504d6311f1",
+        "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+        "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+      },
+      "name": {
+        "firstName": "John",
+        "lastName": "Smith"
+      },
+      "addresses": [
+        {
+          "meta": {
+            "id": "1fc558a5-2368-4969-87e2-70e0473a25b1",
+            "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+            "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+          },
+          "kind": "Postal Address",
+          "addressLine1": "PO box 314 PO",
+          "addressLine2": "17-29 Greenfield Rd",
+          "city": "Sydney",
+          "country": "Australia",
+          "state": "NSW",
+          "postCode": 2000
+        },
+        {
+          "meta": {
+            "id": "cb54a3bf-33d3-4c5b-abcc-215ba2eeaa6f",
+            "created": "Sun, 17 Aug 2014 00:30:00 GMT",
+            "modified": "Sun, 17 Aug 2014 01:00:00 GMT"
+          },
+          "kind": "Home Address",
+          "addressLine1": "Unit 3/14 Pie St",
+          "addressLine2": "",
+          "city": "Sydney",
+          "country": "Australia",
+          "state": "NSW",
+          "postCode": 2000
+        }
+      ]
+}

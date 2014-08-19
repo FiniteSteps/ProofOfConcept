@@ -1,0 +1,89 @@
+{
+	"type":"object",
+	"$schema": "http://json-schema.org/draft-03/schema",
+	"id": "http://jsonschema.net",
+	"required":true,
+	"properties":{
+		"addresses": {
+			"type":"array",
+			"minitems": "0",
+			"maxitems": "100",
+			"id": "http://jsonschema.net/addresses",
+			"required":true,
+			"items":
+				{
+					"type":"object",
+					"id": "http://jsonschema.net/addresses/0",
+					"required":true,
+					"properties":{
+						"addressLine1": {
+							"type":"string",
+							"id": "http://jsonschema.net/addresses/0/addressLine1",
+              "minLength": 1,
+              "maxLength": 100,
+							"required":true
+						},
+						"addressLine2": {
+							"type":"string",
+							"id": "http://jsonschema.net/addresses/0/addressLine2",
+							"required":false
+						},
+						"city": {
+							"type":"string",
+							"id": "http://jsonschema.net/addresses/0/city",
+              "minLength": 4,
+              "maxLength": 50,
+							"required":true
+						},
+						"country": {
+							"type":"string",
+							"id": "http://jsonschema.net/addresses/0/country",
+              "minLength": 1,
+              "maxLength": 100,
+							"required":true
+						},
+						"kind": {
+							"type":"string",
+							"id": "http://jsonschema.net/addresses/0/kind",
+              "minLength": 1,
+              "maxLength": 50,
+							"required":true
+						},
+						"postCode": {
+							"type":"integer",
+							"id": "http://jsonschema.net/addresses/0/postCode",
+              "minLength": 4,
+              "maxLength": 4,
+							"required":true
+						},
+						"state": {
+							"type":"string",
+							"id": "http://jsonschema.net/addresses/0/state",
+              "minLength": 2,
+              "maxLength": 50,
+							"required":true
+						}
+					}
+				}
+			
+
+		},
+		"name": {
+			"type":"object",
+			"id": "http://jsonschema.net/name",
+			"required":true,
+			"properties":{
+				"firstName": {
+					"type":"string",
+					"id": "http://jsonschema.net/name/firstName",
+					"required":true
+				},
+				"lastName": {
+					"type":"string",
+					"id": "http://jsonschema.net/name/lastName",
+					"required":true
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,210 @@
+#%RAML 0.8
+title: Customer API
+version: v1
+
+protocols: ["HTTPS"] 
+baseUri: https://api.cloudshop.local/{version}
+mediaType: application/json
+
+#
+#  Schemas
+#
+schemas:
+  - customer: !include schema-customer.json
+  - subscription: !include schema-subscription.json
+#
+#  Security
+#
+securitySchemes:
+    - oauth_2_0:
+        description: |
+            OAuth 2.0 for authenticating all API requests.
+        type: OAuth 2.0
+        describedBy:
+            headers:
+                Authorization:
+                    description: |
+                       Used to send a valid OAuth 2 access token. Do not use
+                       with the "access_token" query string parameter.
+                    type: string
+            queryParameters:
+                access_token:
+                    description: |
+                       Used to send a valid OAuth 2 access token. Do not use together with
+                       the "Authorization" header
+                    type: string
+            responses:
+                401:
+                    description: |
+                        Bad or expired token. This can happen if the user or application
+                        revoked or expired an access token. To fix, you should re-
+                        authenticate the user.
+                403:
+                    description: |
+                        Bad OAuth request (wrong consumer key, bad nonce, expired
+                        timestamp...). Unfortunately, re-authenticating the user won't help here.
+        settings:
+          authorizationUri: https://www.cloudshop.com/v1/oauth2/authorize
+          accessTokenUri: https://api.cloudshop.com/v1/oauth2/token
+          authorizationGrants: [ credentials ]
+
+#
+#  Resource types
+#
+resourceTypes:
+  - base:
+      description: Base type for all resource types
+      head:
+        securedBy: [oauth_2_0]
+        description: |
+          Determine if <<resourcePathName>> exists and you have permission to access it.
+        responses:
+          403:
+            description: |
+              The request is understood, but it has been refused or access is not allowed. An accompanying error message will explain why. This code is used when requests are being denied due to update limits.
+          404:
+            description: |
+              The URI requested is invalid or the resource requested, such as a <<resourcePathName>>, does not exists. Also returned when the requested format is not supported by the requested method.
+          200:
+            description: Success!
+      
+  - collection:
+      type: base
+      description: Collection of available <<resourcePathName>> in CloudShop.      
+      get:
+        securedBy: [oauth_2_0]
+        description: Get a list of <<resourcePathName>>.
+        headers: !include resourceTypes-common-headers-get.raml
+        responses: !include resourceTypes-collection-responses-get.raml
+      post:
+        securedBy: [oauth_2_0]
+        description: | 
+          Add a new <<resourcePathName|!singularize>> to CloudShop.
+        body:
+          application/json:
+            schema: <<resourcePathName|!singularize>>
+            example: |
+              <<exampleItem>>
+        headers: !include resourceTypes-common-headers-post.raml
+        responses: !include resourceTypes-common-responses-post.raml
+  - collection-item:
+      type: base
+      description: Entity representing a <<resourcePathName|!singularize>>
+      get:
+        securedBy: [oauth_2_0]
+        description: |
+          Get the <<resourcePathName|!singularize>>
+          with <<resourcePathName|!singularize>>Id =
+          {<<resourcePathName|!singularize>>Id}
+        headers: !include resourceTypes-common-headers-get.raml
+        responses: !include resourceTypes-collection-item-responses-get.raml
+      put:
+        securedBy: [oauth_2_0]
+        description: |
+          Get the <<resourcePathName|!singularize>>
+          with <<resourcePathName|!singularize>>Id =
+          {<<resourcePathName|!singularize>>Id} and perform updates.
+        responses: !include resourceTypes-common-responses-put.raml
+      patch:
+        securedBy: [oauth_2_0]
+        description: |
+          Get the <<resourcePathName|!singularize>>
+          with <<resourcePathName|!singularize>>Id =
+          {<<resourcePathName|!singularize>>Id} and perform partial updates.
+        responses: !include resourceTypes-common-responses-patch.raml
+      delete:
+        securedBy: [oauth_2_0]
+        description: |
+          Removes the <<resourcePathName|!singularize>>
+          with <<resourcePathName|!singularize>>Id =
+          {<<resourcePathName|!singularize>>Id}.
+        responses: !include resourceTypes-common-responses-delete.raml
+#
+#  Traits
+#
+traits:
+  - limited:
+      queryParameters:
+        limit:
+          description: A general limit on the number of rows to return in any request.
+          type: integer
+          default: 100  
+  - pageable:
+      queryParameters:
+        offset:
+          description: Skip over a number of elements by specifying an offset value for the query
+          type: integer
+          required: false
+          example: 20
+          default: 0
+        maxItems:
+          description: Limit the number of items on the response
+          type: integer
+          required: false
+          example: 20
+          default: 50
+  - secured:
+      queryParameters:
+          access_token:
+            description: "The access token provided by the authentication application"
+            example: AABBCCDD
+            required: true
+            type: string          
+
+#
+#  Resources
+#
+/customers:
+  type: 
+    collection:
+      exampleCollection: !include example-customers-retrieve.json
+      exampleItem:       !include example-customer-retrieve.json
+  get:
+    is: [secured, limited, pageable]
+  /{customerId}:
+    type:
+      collection-item:
+        exampleItem: !include example-customer-retrieve.json
+/subscriptions:
+  type: 
+    collection:
+      exampleCollection: !include example-subscriptions-retrieve.json
+      exampleItem:       !include example-subscription-retrieve.json
+  get:
+    is: [secured, limited, pageable]
+  /{subscriptionId}:
+    type: base
+    description: Entity representing a <<resourcePathName|!singularize>>
+    get:
+      securedBy: [oauth_2_0]
+      description: |
+        Get the <<resourcePathName|!singularize>>
+        with <<resourcePathName|!singularize>>Id =
+        {<<resourcePathName|!singularize>>Id}
+      headers:        
+        X-RateLimit-Limit:
+          description: |
+            the rate limit ceiling for that given request
+          type: integer
+          required: true
+          example: 1234
+        X-RateLimit-Remaining:
+          description: |
+            the number of requests left for the 5 minute window
+          type: integer
+          required: true
+          example: 1234
+        X-RateLimit-Reset:
+          description: |
+            the remaining window before the rate limit resets in UTC epoch seconds
+          type: integer
+          required: true
+          example: 1234              
+      responses: !include resourceTypes-collection-item-responses-get.raml
+    delete:
+      securedBy: [oauth_2_0]
+      description: |
+        Removes the <<resourcePathName|!singularize>>
+        with <<resourcePathName|!singularize>>Id =
+        {<<resourcePathName|!singularize>>Id}.
+      responses: !include resourceTypes-common-responses-delete.raml

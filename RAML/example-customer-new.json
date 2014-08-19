@@ -1,0 +1,26 @@
+{
+  "name": {
+    "firstName": "John",
+    "lastName": "Smith"
+  },
+  "addresses": [
+    {
+      "kind": "Postal Address",
+      "addressLine1": "PO box 314 PO",
+      "addressLine2": "17-29 Greenfield Rd",
+      "city": "Sydney",
+      "country": "Australia",
+      "state": "NSW",
+      "postCode": 2000
+    },
+    {
+      "kind": "Home Address",
+      "addressLine1": "Unit 3/14 Pie St",
+      "addressLine2": "",
+      "city": "Sydney",
+      "country": "Australia",
+      "state": "NSW",
+      "postCode": 2000
+    }    
+  ]
+}
